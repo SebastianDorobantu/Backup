@@ -1,0 +1,18 @@
+[Unit]
+Description=Porneste dropbox pt ca astia de la dropbox is prea inutili
+
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/dropbox start
+
+Restart=always
+User=seba
+Group=seba
+
+
+WorkingDirectory=/home/seba
+
+[Install]
+WantedBy=multi-user.target
